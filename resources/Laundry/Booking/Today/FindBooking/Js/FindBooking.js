@@ -1,4 +1,4 @@
-// import { FindBookingShowtHtmlFunc } from "./HtmlFuns/FromHbs";
+import { FindBookingShowtHtmlFunc } from "./HtmlFuns/FromHbs";
 import { ChangeClassFunc } from "../../../../CommonFuncs/Header";
 // import { BookingSaveFunc } from "../Js/SaveFuncs";
 // import { BookingClear } from "../Js/ClearFunc";
@@ -52,10 +52,8 @@ let ToDOMBodyFromPK = async ({ inBookingPK }) => {
 };
 
 let ToDOMBodyFromPKAndQrCode = async ({ inBookingPK, inQrCode }) => {
-    console.log("inQrCode ---------- : ", inQrCode);
     let jVarLocalFindBookingHeaderId = document.getElementById("FindBookingHeaderId");
     ChangeClassFunc({ inHtmlControl: jVarLocalFindBookingHeaderId });
-
 
     let jVarLocalFromHbs = await FindBookingShowtHtmlFunc();
 
