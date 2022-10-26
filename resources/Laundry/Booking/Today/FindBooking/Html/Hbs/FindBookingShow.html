@@ -1,4 +1,4 @@
-{{log "Find Booking " this}}
+{{log "Find Booking : " this}}
 <div class="card">
     <div class="card-header">
         <div class="row">
@@ -91,182 +91,201 @@
             </div>
         </div>
 
-        {{#each GarmentDetails}}
+
     </div>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
-            tabindex="0">
+    <div class="card-body">
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Garments</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">QrCodes</button>
+            </li>
+        </ul>
 
-            <div class="row">
-                <div class="col-1 fs-2">1</div>
-                <div class="col-8">
-                    <div class="mb-3">
-                        <input type="text" class="form-control fs-2" id="Garments1" aria-describedby="helpId"
-                            placeholder="" value="{{GarmentDetails.1.Name}}" disabled>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+
+                <div class="row">
+                    <div class="col-1 fs-2">1</div>
+                    <div class="col-8">
+                        <div class="mb-3">
+                            <input type="text" class="form-control fs-2" id="Garments1" aria-describedby="helpId"
+                                placeholder="" value="{{GarmentDetails.1.Name}}" disabled>
+                        </div>
                     </div>
-                </div>
-                <div class="col-3">
+                    <div class="col-3">
 
-                    <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs1" aria-describedby="helpId"
-                        placeholder="" value="{{GarmentDetails.1.Pcs}}" disabled>
-                </div>
+                        <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs1"
+                            aria-describedby="helpId" placeholder="" value="{{GarmentDetails.1.Pcs}}" disabled>
+                    </div>
 
+                </div>
+                <div class="row">
+                    <div class="col-1 fs-2">2</div>
+                    <div class="col-8">
+                        <div class="mb-3">
+                            <input type="text" class="form-control fs-2" id="Garments2" aria-describedby="helpId"
+                                placeholder="" value="{{GarmentDetails.2.Name}}" disabled>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs2"
+                            aria-describedby="helpId" placeholder="" value="{{GarmentDetails.2.Pcs}}" disabled>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-1 fs-2">3</div>
+                    <div class="col-8">
+                        <div class="mb-3">
+                            <input type="text" class="form-control fs-2" id="Garments3" aria-describedby="helpId"
+                                placeholder="" value="{{GarmentDetails.3.Name}}" disabled>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                        <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs3"
+                            aria-describedby="helpId" placeholder="" value="{{GarmentDetails.3.Pcs}}" disabled>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-1 fs-2">4</div>
+                    <div class="col-8">
+                        <div class="mb-3">
+                            <input type="text" class="form-control fs-2" id="Garments4" aria-describedby="helpId"
+                                placeholder="" value="{{GarmentDetails.4.Name}}" disabled>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs4"
+                            aria-describedby="helpId" placeholder="" value="{{GarmentDetails.4.Pcs}}" disabled>
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-1 fs-2">5</div>
+                    <div class="col-8">
+                        <div class="mb-3">
+                            <input type="text" class="form-control fs-2" id="Garments5" aria-describedby="helpId"
+                                placeholder="" value="{{GarmentDetails.5.Name}}" disabled>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                        <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs5"
+                            aria-describedby="helpId" placeholder="" value="{{GarmentDetails.5.Pcs}}" disabled>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-1 fs-2">6</div>
+                    <div class="col-8">
+                        <div class="mb-3">
+                            <input type="text" class="form-control fs-2" id="Garments6" aria-describedby="helpId"
+                                placeholder="" value="{{GarmentDetails.6.Name}}" disabled>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                        <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs6"
+                            aria-describedby="helpId" placeholder="" value="{{GarmentDetails.6.Pcs}}" disabled>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-1 fs-2">7</div>
+                    <div class="col-8">
+                        <div class="mb-3">
+                            <input type="text" class="form-control fs-2" id="Garments7" aria-describedby="helpId"
+                                placeholder="" value="{{GarmentDetails.7.Name}}" disabled>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                        <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs7"
+                            aria-describedby="helpId" placeholder="" value="{{GarmentDetails.7.Pcs}}" disabled>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-1 fs-2">8</div>
+                    <div class="col-8">
+                        <div class="mb-3">
+                            <input type="text" class="form-control fs-2" id="Garments8" aria-describedby="helpId"
+                                placeholder="" value="{{GarmentDetails.8.Name}}" disabled>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                        <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs8"
+                            aria-describedby="helpId" placeholder="" value="{{GarmentDetails.8.Pcs}}" disabled>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-1 fs-2">9</div>
+                    <div class="col-8">
+                        <div class="mb-3">
+                            <input type="text" class="form-control fs-2" id="Garments9" aria-describedby="helpId"
+                                placeholder="" value="{{GarmentDetails.9.Name}}" disabled>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                        <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs9"
+                            aria-describedby="helpId" placeholder="" value="{{GarmentDetails.9.Pcs}}" disabled>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-1 fs-2">10</div>
+                    <div class="col-8">
+                        <div class="mb-3">
+                            <input type="text" class="form-control fs-2" id="Garments10" aria-describedby="helpId"
+                                placeholder="" value="{{GarmentDetails.10.Name}}" disabled>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                        <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs10"
+                            aria-describedby="helpId" placeholder="" value="{{GarmentDetails.10.Pcs}}" disabled>
+
+                    </div>
+
+                </div>
             </div>
-            <div class="row">
-                <div class="col-1 fs-2">2</div>
-                <div class="col-8">
-                    <div class="mb-3">
-                        <input type="text" class="form-control fs-2" id="Garments2" aria-describedby="helpId"
-                            placeholder="" value="{{GarmentDetails.2.Name}}" disabled>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col">All QrCodes</div>
+                            <div class="col"><input id="SearchQrCodeTable" class="form-control" type="search" placeholder="Search"
+                                onkeypress="jFSearchInputKeyPress(event)" aria-label="Search" autocomplete="off"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-3">
-                    <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs2" aria-describedby="helpId"
-                        placeholder="" value="{{GarmentDetails.2.Pcs}}" disabled>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-1 fs-2">3</div>
-                <div class="col-8">
-                    <div class="mb-3">
-                        <input type="text" class="form-control fs-2" id="Garments3" aria-describedby="helpId"
-                            placeholder="" value="{{GarmentDetails.3.Name}}" disabled>
-                    </div>
-                </div>
-                <div class="col-3">
-
-                    <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs3" aria-describedby="helpId"
-                        placeholder="" value="{{GarmentDetails.3.Pcs}}" disabled>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-1 fs-2">4</div>
-                <div class="col-8">
-                    <div class="mb-3">
-                        <input type="text" class="form-control fs-2" id="Garments4" aria-describedby="helpId"
-                            placeholder="" value="{{GarmentDetails.4.Name}}" disabled>
-                    </div>
-                </div>
-
-                <div class="col-3">
-                    <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs4" aria-describedby="helpId"
-                        placeholder="" value="{{GarmentDetails.4.Pcs}}" disabled>
-                </div>
-
-
-            </div>
-            <div class="row">
-                <div class="col-1 fs-2">5</div>
-                <div class="col-8">
-                    <div class="mb-3">
-                        <input type="text" class="form-control fs-2" id="Garments5" aria-describedby="helpId"
-                            placeholder="" value="{{GarmentDetails.5.Name}}" disabled>
-                    </div>
-                </div>
-                <div class="col-3">
-
-                    <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs5" aria-describedby="helpId"
-                        placeholder="" value="{{GarmentDetails.5.Pcs}}" disabled>
-
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-1 fs-2">6</div>
-                <div class="col-8">
-                    <div class="mb-3">
-                        <input type="text" class="form-control fs-2" id="Garments6" aria-describedby="helpId"
-                            placeholder="" value="{{GarmentDetails.6.Name}}" disabled>
-                    </div>
-                </div>
-                <div class="col-3">
-
-                    <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs6" aria-describedby="helpId"
-                        placeholder="" value="{{GarmentDetails.6.Pcs}}" disabled>
-
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-1 fs-2">7</div>
-                <div class="col-8">
-                    <div class="mb-3">
-                        <input type="text" class="form-control fs-2" id="Garments7" aria-describedby="helpId"
-                            placeholder="" value="{{GarmentDetails.7.Name}}" disabled>
-                    </div>
-                </div>
-                <div class="col-3">
-
-                    <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs7" aria-describedby="helpId"
-                        placeholder="" value="{{GarmentDetails.7.Pcs}}" disabled>
-
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-1 fs-2">8</div>
-                <div class="col-8">
-                    <div class="mb-3">
-                        <input type="text" class="form-control fs-2" id="Garments8" aria-describedby="helpId"
-                            placeholder="" value="{{GarmentDetails.8.Name}}" disabled>
-                    </div>
-                </div>
-                <div class="col-3">
-
-                    <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs8" aria-describedby="helpId"
-                        placeholder="" value="{{GarmentDetails.8.Pcs}}" disabled>
-
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-1 fs-2">9</div>
-                <div class="col-8">
-                    <div class="mb-3">
-                        <input type="text" class="form-control fs-2" id="Garments9" aria-describedby="helpId"
-                            placeholder="" value="{{GarmentDetails.9.Name}}" disabled>
-                    </div>
-                </div>
-                <div class="col-3">
-
-                    <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs9" aria-describedby="helpId"
-                        placeholder="" value="{{GarmentDetails.9.Pcs}}" disabled>
-
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-1 fs-2">10</div>
-                <div class="col-8">
-                    <div class="mb-3">
-                        <input type="text" class="form-control fs-2" id="Garments10" aria-describedby="helpId"
-                            placeholder="" value="{{GarmentDetails.10.Name}}" disabled>
-                    </div>
-                </div>
-                <div class="col-3">
-
-                    <input type="number" min="1" max="99" class="form-control fs-2" id="Pcs10" aria-describedby="helpId"
-                        placeholder="" value="{{GarmentDetails.10.Pcs}}" disabled>
-
-                </div>
-
-            </div>
-        </div>
-        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-            <div class="card">
-                <div class="card-header">
-                    <div class="row">
-                        <div class="col">All QrCodes</div>
-                        <div class="col"><input id="SearchQrCodeTable" class="form-control" type="search"
-                                placeholder="Search" onkeypress="jFSearchInputKeyPress(event)" aria-label="Search"
-                                autocomplete="off"></div>
-                    </div>
-                </div>
-
+                
                 <div class="table-responsive">
                     <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Garment Name</th>
+                                <th scope="col">Garments Ref</th>
+                                <th scope="col">QrCode</th>
+                            </tr>
+                        </thead>
                         <tbody id="KTableBody">
                             {{#each QrCodesArray}}
                             <tr>
@@ -278,14 +297,41 @@
                                 <td>{{key}}</td>
                             </tr>
                             {{/each}}
-                        </tbody>
+                            
+                     </tbody>
                     </table>
                 </div>
                 <div class="card-footer text-muted">
-
+                
                     Footer
-
+                
                 </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                ...</div>
+            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab"
+                tabindex="0">...</div>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="ModalForQrCode" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">QrCodes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="ModalBody">
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="printJS('ModalBody', 'html')">Print</button>
             </div>
         </div>
     </div>
