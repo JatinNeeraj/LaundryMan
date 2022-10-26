@@ -19,4 +19,4 @@ let QrCodeArrayHtmlFunc = async () => {
     return await data;
 };
 
-export { CustomerDetailstHtmlFunc,GarmentDetailsHtmlFunc,QrCodeArrayHtmlFunc };
+export { CustomerDetailstHtmlFunc, GarmentDetailsHtmlFunc, QrCodeArrayHtmlFunc };
