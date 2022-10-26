@@ -1,49 +1,61 @@
-<div class="row">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-
-                <form id="FormVertical" onsubmit="return false;">
-                    <div class="row">
-                        <div class="col">
-                            <label class="col-form-label fs-2">Customer Name</label>
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col">Masters/Customers/Insert</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+    
+                    <form id="FormVertical" onsubmit="return false;">
+                        <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control fs-2" name="CustomerName" id="CustomerName"
-                                    aria-describedby="emailHelp" required="">
-                                <div class="invalid-feedback">
-                                    Should not be empty!
+                                <label class="col-form-label fs-2">Customer Name</label>
+                                <div class="col">
+                                    <input type="text" class="form-control fs-2" name="CustomerName" id="CustomerName"
+                                        aria-describedby="emailHelp" required="">
+                                    <div class="invalid-feedback">
+                                        Should not be empty!
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label class="col-md-6 col-form-label fs-2">Mobile</label>
+                        <div class="row">
                             <div class="col">
-                                <input type="tel" class="form-control fs-2" name="Mobile" id="Mobile"
-                                    pattern="[6789][0-9]{9}">
-                                <div class="invalid-feedback">
-                                    Should not be empty!
+                                <label class="col-md-6 col-form-label fs-2">Mobile</label>
+                                <div class="col">
+                                    <input type="tel" class="form-control fs-2" name="Mobile" id="Mobile"
+                                        pattern="[6789][0-9]{9}">
+                                    <div class="invalid-feedback">
+                                        Should not be empty!
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label class="col-md-6 col-form-label fs-2">City</label>
+                        <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control fs-2" name="City" id="City" required="">
-                                <div class="invalid-feedback">
-                                    Should not be empty!
+                                <label class="col-md-6 col-form-label fs-2">City</label>
+                                <div class="col">
+                                    <input type="text" class="form-control fs-2" name="City" id="City" required="">
+                                    <div class="invalid-feedback">
+                                        Should not be empty!
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-            <div class="card-footer text-muted">
-                <button class="btn btn-success fs-3" id="CustomersSaveButtonId">Save</button>
+                    </form>
+                </div>
+                <div class="card-footer text-muted">
+                    <button class="btn btn-success fs-3" id="CustomersSaveButtonId">Save</button>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="card-footer text-muted">
+
+        Footer
+
     </div>
 </div>
