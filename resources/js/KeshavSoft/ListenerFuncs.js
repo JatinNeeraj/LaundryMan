@@ -29,8 +29,11 @@ let LocaljFHeaderSearchInputKeyPress = async (event) => {
 
         let jVarLoalFromDalCompletedForPKFunsStartFunc = await DalCompletedForPKFunsStartFunc({ inQrCode: jVarLocalQrCode });
 
+        console.log("jVarLoalFromDalCompletedForPKFunsStartFunc : ", jVarLoalFromDalCompletedForPKFunsStartFunc);
+
         if (jVarLoalFromDalCompletedForPKFunsStartFunc.KTF === false) {
             await ShowWithInputValue({ inToShowValue: jVarLocalCurrentTarget.value });
+            return;
         };
 
         //        console.log("jVarLoalFromDalBillingForPKFunsStartFunc --------: ", jVarLoalFromDalBillingForPKFunsStartFunc);
