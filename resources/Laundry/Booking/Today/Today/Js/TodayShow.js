@@ -25,6 +25,7 @@ let TodayShowFunc = async (inEvent) => {
     LocalSetFocusFunc();
 };
 
+
 let LocalSetFocusFunc = () => {
     let jVarLocalCustomerName = document.getElementById("SearchQrCodeTable");
     jVarLocalCustomerName.focus();

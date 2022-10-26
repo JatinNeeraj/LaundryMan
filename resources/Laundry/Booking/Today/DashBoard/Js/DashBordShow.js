@@ -57,7 +57,6 @@ let LocalApplyRowColours = ({ inJsonData }) => {
                 value.TableRowColour = "table-danger";
 
                 LocalSetFocusFunc();
-
             };
         }
     );

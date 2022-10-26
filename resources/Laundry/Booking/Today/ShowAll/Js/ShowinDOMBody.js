@@ -23,6 +23,7 @@ let ShowAll = async (inEvent) => {
     document.getElementById("KCont1").innerHTML = jVarLocalHtml;
 
     LocalSetFocusFunc();
+    
 };
 
 
