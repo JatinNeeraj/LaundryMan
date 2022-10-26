@@ -3,7 +3,7 @@ import { LastPkData } from "../../../../../Dal/Bookings/PullFuncs/PickFuncs";
 import { FromPkWithQrCodeObject as DalFromPkWithQrCodeObject, FromPkWithCompleted as DalFromPkWithCompleted } from "../../../../../Dal/Bookings/PullFuncs/PickFuncs";
 
 import { FindBookingHtmlFunc } from "./HtmlFuns/FromTemplate";
-import { FindBookingShowtHtmlFunc } from "./HtmlFuns/FromHbs";
+import { FindBookingShowHtmlFunc } from "./HtmlFuns/FromHbs";
 
 let FindBookingFunc = async (inEvent) => {
     if ((inEvent === undefined) === false) {
@@ -13,7 +13,7 @@ let FindBookingFunc = async (inEvent) => {
 
     await FindBookingHtmlFunc();
 
-    let jVarLocalFromHbs = await FindBookingShowtHtmlFunc();
+    let jVarLocalFromHbs = await FindBookingShowHtmlFunc();
 
     let jVarLocalKCont1 = document.getElementById("KCont1");
 
@@ -34,7 +34,7 @@ let ToDOMBodyFromPK = async ({ inBookingPK }) => {
 
     await FindBookingHtmlFunc();
 
-    let jVarLocalFromHbs = await FindBookingShowtHtmlFunc();
+    let jVarLocalFromHbs = await FindBookingShowHtmlFunc();
 
     let jVarLocalKCont1 = document.getElementById("KCont1");
 
@@ -53,7 +53,7 @@ let ToDOMBodyFromPKAndQrCode = async ({ inBookingPK, inQrCode }) => {
     let jVarLocalFindBookingHeaderId = document.getElementById("FindBookingHeaderId");
     ChangeClassFunc({ inHtmlControl: jVarLocalFindBookingHeaderId });
 
-    let jVarLocalFromHbs = await FindBookingShowtHtmlFunc();
+    let jVarLocalFromHbs = await FindBookingShowHtmlFunc();
 
     let jVarLocalKCont1 = document.getElementById("KCont1");
 
@@ -72,7 +72,7 @@ let ToDOMBodyAsParts = async ({ inBookingPK, inQrCode }) => {
     let jVarLocalFindBookingHeaderId = document.getElementById("FindBookingHeaderId");
     ChangeClassFunc({ inHtmlControl: jVarLocalFindBookingHeaderId });
 
-    let jVarLocalFromHbs = await FindBookingShowtHtmlFunc();
+    let jVarLocalFromHbs = await FindBookingShowHtmlFunc();
 
     let jVarLocalKCont1 = document.getElementById("KCont1");
     jVarLocalKCont1.innerHTML = jVarLocalFromHbs;
