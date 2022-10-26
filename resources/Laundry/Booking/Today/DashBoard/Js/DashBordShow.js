@@ -55,9 +55,18 @@ let LocalApplyRowColours = ({ inJsonData }) => {
 
             if (value.QrCodesCompleted < value.QrCodesTotal) {
                 value.TableRowColour = "table-danger";
+
+                LocalSetFocusFunc();
+
             };
         }
     );
+};
+
+
+let LocalSetFocusFunc = () => {
+    let jVarLocalCustomerName = document.getElementById("SearchQrCodeTable");
+    jVarLocalCustomerName.focus();
 };
 
 export { DashBoardShow }

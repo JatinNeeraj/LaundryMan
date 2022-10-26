@@ -25,6 +25,14 @@ let QrcodeShow = async (inEvent) => {
     let jVarLocalHtml = template(jVarLocalDataNeeded.JsonData);
 
     document.getElementById("KCont1").innerHTML = jVarLocalHtml;
+
+    LocalSetFocusFunc();
 };
+
+let LocalSetFocusFunc = () => {
+    let jVarLocalCustomerName = document.getElementById("SearchQrCodeTable");
+    jVarLocalCustomerName.focus();
+};
+
 
 export { QrcodeShow };
