@@ -27,6 +27,7 @@ let CustomersShowFunc = async (inEvent) => {
 let LocalSetFocusFunc = () => {
     let jVarLocalCustomerName = document.getElementById("SearchQrCodeTable");
     jVarLocalCustomerName.focus();
+    
 };
 
 export { CustomersShowFunc };
