@@ -1,6 +1,6 @@
 import { ChangeClassFunc } from "../../../../CommonFuncs/Header";
 import { LastPkData } from "../../../../../Dal/Bookings/PullFuncs/PickFuncs";
-import { FromPkWithQrCodeObject as DalFromPkWithQrCodeObject } from "../../../../../Dal/Bookings/PullFuncs/PickFuncs";
+import { FromPkWithQrCodeObject as DalFromPkWithQrCodeObject, FromPkWithCompleted as DalFromPkWithCompleted } from "../../../../../Dal/Bookings/PullFuncs/PickFuncs";
 
 import { FindBookingHtmlFunc } from "./HtmlFuns/FromTemplate";
 import { FindBookingShowtHtmlFunc } from "./HtmlFuns/FromHbs";
@@ -78,8 +78,8 @@ let ToDOMBodyAsParts = async ({ inBookingPK, inQrCode }) => {
     jVarLocalKCont1.innerHTML = jVarLocalFromHbs;
 
     // var template = Handlebars.compile(jVarLocalFromHbs);
-    // let jVarLocalDataToShow = await DalFromPkWithQrCodeObject({ inRowPK: inBookingPK });
-
+    let jVarLocalDataToShow = await DalFromPkWithCompleted({ inRowPK: inBookingPK });
+    console.log("jVarLocalDataToShow : ", jVarLocalDataToShow);
     // if (jVarLocalDataToShow.KTF) {
     //     jVarLocalKCont1.innerHTML = template(jVarLocalDataToShow.ForQrCode);
     // };

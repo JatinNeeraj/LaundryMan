@@ -1,6 +1,7 @@
 import { StartFunc as FuncsForPkStartFunc } from "../FuncsForPk/Start";
 //import { StartFunc as QrCodesStartFunc } from "../../QrCodes/PullFuncs/Original";
 import { StartFunc as QrCodesStartFunc } from "../../QrCodes/PullFuncs/WithBookingData";
+import { StartFunc as CompletedStartFunc } from "../../Completed/PullFuncs/Original";
 
 import _ from "../../../js/lodash";
 
@@ -101,4 +102,44 @@ let LastPkData = async () => {
 
 };
 
-export { FromPk, LastPkData, FromPkForQrCodes, FromPkWithQrCodeObject };
+let FromPkWithCompleted = async ({ inRowPK }) => {
+    let LocalReturnObject = { KTF: false, KResult: "" };
+    let LocalFromOriginalData = await FromPk({ inRowPK });
+
+    if (LocalFromOriginalData.KTF === false) {
+        LocalReturnObject.KReason = LocalFromOriginalData.KReason;
+        return await LocalReturnObject;
+    };
+
+    LocalReturnObject.KTF = true;
+    LocalReturnObject.ForQrCode = LocalFromOriginalData.KResult;
+
+    let LocalFromQrCodesStartFunc = await QrCodesStartFunc();
+
+    if (LocalFromQrCodesStartFunc.KTF === false) {
+        LocalReturnObject.KReason = LocalFromQrCodesStartFunc.KReason;
+        return await LocalReturnObject;
+    };
+
+    let LocalQrCodesNeeded = _.filter(LocalFromQrCodesStartFunc.JsonData, { BookingRef: inRowPK });
+    let LocalKeyNeeded = ["GarmentsRef", "GarmentName", "QrCode"];
+
+    let LocalQrCodesNeededWithKeys = _.map(LocalQrCodesNeeded, LoopItem => _.pick(LoopItem, LocalKeyNeeded));
+    LocalReturnObject.ForQrCode.QrCodesArray = LocalQrCodesNeededWithKeys;
+
+    let LocalFromCompletedStartFunc = await CompletedStartFunc();
+
+    if (LocalFromCompletedStartFunc.KTF === false) {
+        LocalReturnObject.KReason = LocalFromCompletedStartFunc.KReason;
+        return await LocalReturnObject;
+    };
+
+    LocalReturnObject.ForQrCode.QrCodesArray = _.map(LocalReturnObject.ForQrCode.QrCodesArray, LoopItem => {
+        LoopItem.Completed = LoopItem.QrCode in LocalFromCompletedStartFunc.JsonData;
+        return LoopItem;
+    });
+
+    return await LocalReturnObject;
+};
+
+export { FromPk, LastPkData, FromPkForQrCodes, FromPkWithQrCodeObject, FromPkWithCompleted };
