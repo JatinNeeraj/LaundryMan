@@ -30,5 +30,4 @@ let LocalSetFocusFunc = () => {
     jVarLocalCustomerName.focus();
 };
 
-
 export { GarmentsShowFunc };
