@@ -1,7 +1,7 @@
 import { StartFunc as DalCompletedForPKFunsStartFunc } from "../../Dal/Completed/PullFuncs/CheckFuncs/ForPKFuns";
 import { StartFunc as CheckFunsStartFunc } from "./CheckFuns";
 import { ShowWithInputValue } from "../../Laundry/Completed/Scan/Js/ShowInDomBody";
-import { ToDOMBodyFromPKAndQrCode as FindBookingToDOMBodyFromPKAndQrCode } from "../../Laundry/Booking/Today/FindBooking/Js/FindBooking";
+import { ToDOMBodyAsParts as ToDOMBodyAsParts } from "../../Laundry/Booking/Today/FindBooking/Js/FindBooking";
 
 let AddlistenersFunc = () => {
     let jVarLocalMainHeaderSearchId = document.getElementById("MainHeaderSearchId");
@@ -35,7 +35,7 @@ let LocaljFHeaderSearchInputKeyPress = async (event) => {
 
         //        console.log("jVarLoalFromDalBillingForPKFunsStartFunc --------: ", jVarLoalFromDalBillingForPKFunsStartFunc);
 
-        await FindBookingToDOMBodyFromPKAndQrCode({
+        await ToDOMBodyAsParts({
             inBookingPK: jVarLocalBookingPK,
             inQrCode: jVarLocalQrCode
         });
