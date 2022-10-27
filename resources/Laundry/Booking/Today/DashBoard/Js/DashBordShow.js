@@ -27,6 +27,7 @@ let DashBoardShow = async (inEvent) => {
     document.getElementById("KCont1").innerHTML = jVarLocalHtml;
 
     AddlistenersFunc();
+    LocalSetFocusFunc();
 };
 
 let LocalAddlistener = () => {
@@ -56,12 +57,11 @@ let LocalApplyRowColours = ({ inJsonData }) => {
             if (value.QrCodesCompleted < value.QrCodesTotal) {
                 value.TableRowColour = "table-danger";
 
-                LocalSetFocusFunc();
+                //LocalSetFocusFunc();
             };
         }
     );
 };
-
 
 let LocalSetFocusFunc = () => {
     let jVarLocalCustomerName = document.getElementById("SearchQrCodeTable");

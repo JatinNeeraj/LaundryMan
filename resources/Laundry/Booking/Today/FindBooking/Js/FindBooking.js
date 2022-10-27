@@ -46,11 +46,15 @@ let ToDOMBodyFromPK = async ({ inBookingPK }) => {
 };
 
 let ToDOMBodyAsParts = async ({ inBookingPK, inQrCode }) => {
-    await ShowInDOMStartFunc();
-
-    // var template = Handlebars.compile(jVarLocalFromHbs);
     let jVarLocalDataToShow = await DalFromPkWithCompleted({ inRowPK: inBookingPK });
     console.log("ToDOMBodyAsParts : ", jVarLocalDataToShow);
+
+    await ShowInDOMStartFunc({
+        inData: jVarLocalDataToShow.ForQrCode,
+        inCustomerName: jVarLocalDataToShow.ForQrCode.CustomerName
+    });
+
+    // var template = Handlebars.compile(jVarLocalFromHbs);
     // if (jVarLocalDataToShow.KTF) {
     //     jVarLocalKCont1.innerHTML = template(jVarLocalDataToShow.ForQrCode);
     // };
