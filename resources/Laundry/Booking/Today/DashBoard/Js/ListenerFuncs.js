@@ -1,4 +1,4 @@
-import { ToDOMBodyFromPK as FindBookingToDOMBodyFromPK } from "../../FindBooking/Js/FindBooking";
+import { ToDOMBodyAsParts } from "../../FindBooking/Js/FindBooking";
 import { ToModal as BillingToModal } from "../../../../Billing/Print/Js/BillToModal";
 
 let AddlistenersFunc = () => {
@@ -18,7 +18,7 @@ let AddlistenersFunc = () => {
 let LocalTableButtonFunc = async (event) => {
     let jVarLocalCurrentTarget = event.currentTarget;
 
-    await FindBookingToDOMBodyFromPK({ inBookingPK: jVarLocalCurrentTarget.dataset.orderno });
+    await ToDOMBodyAsParts({ inBookingPK: jVarLocalCurrentTarget.dataset.orderno });
 };
 
 let LocalTableBillButtonFunc = async (event) => {

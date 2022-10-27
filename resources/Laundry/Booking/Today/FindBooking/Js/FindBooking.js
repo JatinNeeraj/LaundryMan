@@ -50,7 +50,7 @@ let ToDOMBodyAsParts = async ({ inBookingPK, inQrCode }) => {
 
     // var template = Handlebars.compile(jVarLocalFromHbs);
     let jVarLocalDataToShow = await DalFromPkWithCompleted({ inRowPK: inBookingPK });
-    console.log("jVarLocalDataToShow : ", jVarLocalDataToShow);
+    console.log("ToDOMBodyAsParts : ", jVarLocalDataToShow);
     // if (jVarLocalDataToShow.KTF) {
     //     jVarLocalKCont1.innerHTML = template(jVarLocalDataToShow.ForQrCode);
     // };
