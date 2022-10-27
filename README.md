@@ -9,8 +9,12 @@ steps before development :
 
 3.  run neu update
 
+4.  npm run build
+
+5.  neu run
+
+6.  neu build --release
+
 for advanced developers :
 
 1.  code is in resources/Laundry folder
-
-2. Tulasi
